@@ -96,6 +96,6 @@ plot(lambda_in_double, TOD);
 title(glass_model + ' from ' + glass_vendor);
 legend('Group velocity dispersion', 'Third-order dispersion');
 xlabel('Wavelength (\mum)');
-ylabel('GVD (fs^2/mm), TOD (FS^3/mm)')
+ylabel('GVD (fs^2/mm), TOD (fs^3/mm)')
 grid on;
 
