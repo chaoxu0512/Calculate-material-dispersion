@@ -11,7 +11,7 @@ close all;
 % n(lambda) ^2 = A0 + A1 * lambda^2 + A2 * lambda^(-2) +  A3 * lambda^(-4) + A4 * lambda^(-6) + A5 * lambda^(-8)
 % the unit for lambda is um.
 
-glass_vendor_model = ["SCHOTT", "N-SF11"];
+glass_vendor_model = ["CDGM", "H-ZF13"];
 glass_vendor = glass_vendor_model(1);
 glass_model = glass_vendor_model(2);
 
@@ -53,7 +53,7 @@ elseif glass_vendor == "CDGM"
         n = power(A0+ A1 * lambda^2 + A2 * lambda^(-2) +  A3 * lambda^(-4) + A4 * lambda^(-6) + A5 * lambda^(-8), 0.5);
     else
         % Sellmeier equation
-        n = power(1 + K1 * lambda^2 / (lambda^2 - L1) + L2 * lambda^2 / (lambda^2 - C2) + K3 * lambda^2 / (lambda^2 - L3), 0.5);
+        n = power(1 + K1 * lambda^2 / (lambda^2 - L1) + K2 * lambda^2 / (lambda^2 - L2) + K3 * lambda^2 / (lambda^2 - L3), 0.5);
     end 
 end
 
